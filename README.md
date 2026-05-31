@@ -14,9 +14,9 @@ Vibe Coding is the practice of using natural language to describe what you want 
 
 | Component | What | Cost |
 |-----------|------|------|
-| 🖥️ **OpenCode** | Open-source AI coding agent (160K+ ⭐) | **Free** |
-| 🧠 **DeepSeek** | Powerful LLM (v4-pro, 128K context) | **$2-10/mo** |
-| 🔌 **Skills** | Community skill ecosystem (200+ plugins) | **Free** |
+| 🖥️ **OpenCode** | Open-source AI coding agent | **Free** |
+| 🧠 **DeepSeek** | Powerful and affordable LLM (v4-pro) | **~$2-10/mo** |
+| 🔌 **Skills** | Community skill ecosystem | **Free** |
 
 **Result: ~$2-10/month** — that's **1-5% of Claude Code's $200/month**.
 
@@ -47,14 +47,13 @@ That's it. You're ready to code with AI at a fraction of the cost.
 | **GitHub Copilot** | $10-39/mo | $120-468 | 80-95% |
 | **✨ OpenCode + DeepSeek** | **$2-10/mo** | **$24-120** | **95-99%** |
 
-> DeepSeek pricing: $0.14/1M input tokens, $0.28/1M output tokens.
-> Average daily usage of 500 calls = ~$5/month.
+> DeepSeek offers highly competitive API pricing. A typical coding session costs a few cents.
 
 ## The Stack
 
 | Layer | Technology | Why |
 |-------|-----------|-----|
-| **Agent** | [OpenCode](https://github.com/anomalyco/opencode) (160K+⭐) | LSP-aware, multi-session, fully open source |
+| **Agent** | [OpenCode](https://github.com/anomalyco/opencode) | LSP-aware, multi-session, fully open source |
 | **LLM** | [DeepSeek](https://platform.deepseek.com) v4-pro | Best price/performance for coding |
 | **Skills** | Community ecosystem | 200+ domain-specific instruction sets |
 | **MCP** | Model Context Protocol | Extend with custom tools & APIs |
@@ -65,12 +64,12 @@ Skills are instruction sets that supercharge your AI agent. Here are the most va
 
 | Category | Key Skills | Stars |
 |----------|-----------|-------|
-| 🏗️ **Orchestration** | oh-my-openagent, oh-my-claudecode | 60k⭐, 35k⭐ |
-| 📝 **Academic Writing** | scientific-writing, paper-lookup, literature-review | — |
-| 🎨 **Visualization** | architecture-diagram, scientific-schematics | — |
-| 🏢 **Official** | anthropics/skills, openai/skills, microsoft/skills | 144k⭐ |
-| 🎯 **Featured** | andrej-karpathy-skills, caveman, graphify | 163k⭐, 66k⭐, 56k⭐ |
-| 📦 **Mega Packs** | antigravity-awesome-skills (1,484+ skills) | 39k⭐ |
+| 🏗️ **Orchestration** | oh-my-openagent, oh-my-claudecode |
+| 📝 **Academic Writing** | scientific-writing, paper-lookup, literature-review |
+| 🎨 **Visualization** | architecture-diagram, scientific-schematics |
+| 🏢 **Official** | anthropics/skills, openai/skills, microsoft/skills |
+| 🎯 **Featured** | andrej-karpathy-skills, caveman, graphify |
+| 📦 **Mega Packs** | antigravity-awesome-skills (1,484+ skills) |
 
 ## Full Guide (中文)
 
@@ -89,10 +88,10 @@ For the complete guide with detailed setup instructions, step-by-step configurat
 
 ## Related Projects
 
-- [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) — Multi-agent orchestration for OpenCode (60.3k⭐)
-- [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) — Claude Code team orchestration (35.4k⭐)
+- [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) — Multi-agent orchestration for OpenCode
+- [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) — Claude Code team orchestration
 - [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) — 1,484+ community skills
-- [andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) — Karpathy's coding principles (163k⭐)
+- [andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) — Karpathy's coding principles
 
 ## License
 
