@@ -8,9 +8,17 @@
 
 ---
 
-## What is This?
+Vibe Coding is the practice of using natural language to describe what you want to build, and letting AI write the code. It's transformative for productivity — but the cost can be prohibitive.
 
-This guide shows you how to combine **OpenCode** (open-source coding agent) + **DeepSeek** (cost-effective LLM) + **Skills** (community ecosystem) to build a powerful AI coding setup for **$2-10/month** — compared to $200/month for Claude Code Pro.
+**Our solution combines three open/freemium components:**
+
+| Component | What | Cost |
+|-----------|------|------|
+| 🖥️ **OpenCode** | Open-source AI coding agent (160K+ ⭐) | **Free** |
+| 🧠 **DeepSeek** | Powerful LLM (v4-pro, 128K context) | **$2-10/mo** |
+| 🔌 **Skills** | Community skill ecosystem (200+ plugins) | **Free** |
+
+**Result: ~$2-10/month** — that's **1-5% of Claude Code's $200/month**.
 
 ## Quick Start
 
@@ -18,64 +26,79 @@ This guide shows you how to combine **OpenCode** (open-source coding agent) + **
 # 1. Install OpenCode
 npm install -g opencode-ai
 
-# 2. Get DeepSeek API Key (https://platform.deepseek.com/)
+# 2. Get DeepSeek API Key from https://platform.deepseek.com
+
+# 3. Configure environment
 export DEEPSEEK_API_KEY="sk-xxxx"
 
-# 3. Launch
+# 4. Launch in your project
 cd my-project
 opencode
 ```
 
-That's it. You're ready to code with AI assistance.
+That's it. You're ready to code with AI at a fraction of the cost.
 
 ## Cost Comparison
 
-| Tool | Monthly Cost | Annual Cost |
-|------|-------------|-------------|
-| **Claude Code Max** | $200/month | $2,400 |
-| **Cursor Pro** | $20/month | $240 |
-| **OpenCode + DeepSeek** | **$2-10/month** | **$24-120** |
+| Tool | Monthly | Annual | Savings vs Claude Code |
+|------|---------|--------|----------------------|
+| **Claude Code Max** | $200/mo | $2,400 | — |
+| **Cursor Pro** | $20/mo | $240 | 90% |
+| **GitHub Copilot** | $10-39/mo | $120-468 | 80-95% |
+| **✨ OpenCode + DeepSeek** | **$2-10/mo** | **$24-120** | **95-99%** |
 
-## Key Components
+> DeepSeek pricing: $0.14/1M input tokens, $0.28/1M output tokens.
+> Average daily usage of 500 calls = ~$5/month.
 
-### OpenCode
-- Open-source AI coding agent (160K+ GitHub Stars)
-- LSP-aware, multi-session, multi-model
-- Terminal, Desktop, and IDE interfaces
-- MCP protocol support
+## The Stack
 
-### DeepSeek
-- DeepSeek-v4-pro: excellent coding + reasoning at 1/10th the price
-- $0.14/1M input tokens, $0.28/1M output tokens
-- 128K context window
+| Layer | Technology | Why |
+|-------|-----------|-----|
+| **Agent** | [OpenCode](https://github.com/anomalyco/opencode) (160K+⭐) | LSP-aware, multi-session, fully open source |
+| **LLM** | [DeepSeek](https://platform.deepseek.com) v4-pro | Best price/performance for coding |
+| **Skills** | Community ecosystem | 200+ domain-specific instruction sets |
+| **MCP** | Model Context Protocol | Extend with custom tools & APIs |
 
-### Skills Ecosystem
-Community skills that extend agent capabilities:
+## Skills Index
 
-| Category | Examples |
-|----------|----------|
-| **Academic Writing** | scientific-writing, literature-review, paper-lookup, citation-management |
-| **Visualization** | architecture-diagram, mermaid-writing, scientific-schematics |
-| **Development** | tdd, code-review, debugging, git-hygiene |
-| **Orchestration** | oh-my-openagent (60k⭐), oh-my-claudecode (35k⭐) |
-| **Featured** | andrej-karpathy-skills (163k⭐), caveman (66k⭐), graphify (56k⭐) |
+Skills are instruction sets that supercharge your AI agent. Here are the most valuable ones:
 
-## Full Guide
+| Category | Key Skills | Stars |
+|----------|-----------|-------|
+| 🏗️ **Orchestration** | oh-my-openagent, oh-my-claudecode | 60k⭐, 35k⭐ |
+| 📝 **Academic Writing** | scientific-writing, paper-lookup, literature-review | — |
+| 🎨 **Visualization** | architecture-diagram, scientific-schematics | — |
+| 🏢 **Official** | anthropics/skills, openai/skills, microsoft/skills | 144k⭐ |
+| 🎯 **Featured** | andrej-karpathy-skills, caveman, graphify | 163k⭐, 66k⭐, 56k⭐ |
+| 📦 **Mega Packs** | antigravity-awesome-skills (1,484+ skills) | 39k⭐ |
 
-For the complete Chinese guide with detailed setup instructions, skill recommendations, and practical examples, please read [README_zh.md](./README_zh.md).
+## Full Guide (中文)
+
+For the complete guide with detailed setup instructions, step-by-step configuration, and practical examples, read **[README_zh.md](./README_zh.md)** (the main documentation is in Chinese).
 
 ## Key Resources
 
 | Resource | Link |
 |----------|------|
-| OpenCode | https://opencode.ai |
+| OpenCode Official | https://opencode.ai |
 | OpenCode GitHub | https://github.com/anomalyco/opencode |
 | DeepSeek Platform | https://platform.deepseek.com |
+| DeepSeek Pricing | https://api-docs.deepseek.com/quick_start/pricing |
 | MCP Protocol | https://modelcontextprotocol.io |
 | Agent Skills Spec | https://agentskills.io |
+
+## Related Projects
+
+- [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) — Multi-agent orchestration for OpenCode (60.3k⭐)
+- [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) — Claude Code team orchestration (35.4k⭐)
+- [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) — 1,484+ community skills
+- [andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) — Karpathy's coding principles (163k⭐)
 
 ## License
 
 MIT
 
-## Star if you find this useful! ⭐
+---
+<p align="center">
+  <b>Code more, spend less. ⭐</b>
+</p>
