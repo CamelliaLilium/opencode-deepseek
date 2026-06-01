@@ -75,13 +75,13 @@ Skills 是给 Agent 装上的"外挂模块"，每个 Skill 是一个包含 `SKIL
 
 ![Skill 选择器](assets/setup-06-skill-selector.png)
 
-安装也很省心。几乎所有 skill 仓库都有给 OpenCode 里的 LLM 的安装 prompt，完全可以直接复制粘贴到 OpenCode 对话框，agent 会轻松搞定各种配置。
+安装也很省心。几乎每个 skill 仓库的 README 里都有给 LLM 的安装说明，去对应仓库就能找到。
 
 下面推荐我自己日常高频用的几类。
 
 ### 1. 多智能体编排
 
-[oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) — 给 OpenCode 装上全套多智能体系统（Sisyphus 编排器 + 11 个专业 Agent + Team Mode）。装好之后只要在 prompt 里带 `ultrawork` 关键词，系统自动协调 Agent 干活，不用自己手动调度。仓库里有完整的安装指南，直接贴给 Agent 执行。
+[oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) — 给 OpenCode 装上全套多智能体系统（Sisyphus 编排器 + 11 个专业 Agent + Team Mode）。装好之后只要在 prompt 里带 `ultrawork` 关键词，系统自动协调 Agent 干活，不用自己手动调度。
 
 ### 2. [Superpowers](https://github.com/obra/superpowers) — 开发方法论
 
@@ -106,11 +106,11 @@ Superpowers 不只是一个 Skill 合集，它是一套完整的软件开发方�
 | verification-before-completion | 用证据说话，不靠感觉判断"修好了" |
 | using-superpowers | Skill 系统本身的使用说明 |
 
-**OpenCode 安装方法**：仓库的 `.opencode/INSTALL.md` 里有完整的安装提示，把链接贴给 Agent 就行。和 Skills 等其他仓库一样，让 Agent 自己读完指南搞定。
+**OpenCode 安装方法**：详见仓库的 `.opencode/INSTALL.md`。
 
 ### 3. [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) — 社区 Skills 大合集
 
-如果说 oh-my-openagent 是大脑，那这个就是兵器库。1,400+ 个社区贡献的 Skills，覆盖你能想到的所有场景。仓库 README 里就有给 Agent 的一键安装提示。
+如果说 oh-my-openagent 是大脑，那这个就是兵器库。1,400+ 个社区贡献的 Skills，覆盖你能想到的所有场景。
 
 装完你能用到的主要 Skill：
 
@@ -141,7 +141,7 @@ Superpowers 不只是一个 Skill 合集，它是一套完整的软件开发方�
 
 ### 4. 独立仓库推荐
 
-这几个不是合集里的，但值得单独装。同样，去各自仓库 README 里找给 Agent 的安装提示，贴进对话框就行：
+这几个不是合集里的，但值得单独装。去各自的 GitHub 仓库里找安装说明就行：
 
 - [andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) — Karpathy 编码四原则（先思考、简洁优先、精准修改、目标驱动），一个 `CLAUDE.md` 文件搞定
 - [obsidian-skills](https://github.com/kepano/obsidian-skills) — 如果你用 Obsidian 做笔记，Agent 可以直接读写你的 Vault
