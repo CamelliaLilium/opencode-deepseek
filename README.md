@@ -2,6 +2,8 @@
 
 低成本、高效率的 AI 辅助编程环境搭建教程。
 
+[中文](./README.md) | [English](./README_en.md)
+
 ---
 
 ## 目录
