@@ -96,35 +96,47 @@ Superpowers 是 OpenCode 内置的核心工作流技能，影响 Agent 的行为
 - **systematic-debugging** — 遇到 bug 先系统性分析，而不是盲目试错
 - **test-driven-development** — TDD 红→绿→重构流程
 
-### 3. SCI-Writing 系列（学术科研党必备）
+### 3. [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) — 社区 Skills 大合集
 
-我的主力科研工具链，从读论文到写论文到做 PPT 一条龙（来源：[antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills)）：
+如果说 oh-my-openagent 是大脑，那这个就是兵器库。1,400+ 个社区贡献的 Skills，覆盖你能想到的所有场景。安装：
 
-| Skill | 干什么用 |
-|-------|---------|
-| **scientific-writing** | IMRAD 结构化论文写作，支持 APA/AMA/Vancouver 引用 |
-| **scientific-slides** | 学术演讲 PPT / 组会 slides 制作 |
-| **scientific-schematics** | 科研示意图（神经网络架构图、实验流程图等） |
-| **scientific-visualization** | 期刊级多面板数据图（matplotlib/seaborn 驱动） |
-| **scientific-critical-thinking** | 评估论文论证质量，找方法学缺陷 |
-| **scientific-brainstorming** | 研究方向的头脑风暴和 gap 分析 |
-| **paper-lookup** | 跨 PubMed / arXiv / bioRxiv / Semantic Scholar 搜论文 |
-| **citation-management** | Google Scholar 搜引文 + DOI 转 BibTeX |
-| **pyzotero** | 与 Zotero 文献库联动，程序化管理引用 |
+```bash
+npx antigravity-awesome-skills --path .agents/skills --risk safe,none
+```
 
-### 4. 联网搜索类
+装完你能用到的主要 Skill：
 
-Agent 自带的网络能力有时不够用，这两个 Skill 能大幅提升搜索效果：
+| 分类 | Skill | 干什么用 |
+|------|-------|---------|
+| **学术科研** | scientific-writing | IMRAD 结构化论文写作，支持 APA/AMA/Vancouver 引用 |
+| | paper-lookup | 跨 PubMed / arXiv / bioRxiv / Semantic Scholar 搜论文 |
+| | citation-management | Google Scholar 搜引文 + DOI 转 BibTeX |
+| | pyzotero | 与 Zotero 文献库联动，程序化管理引用 |
+| | scientific-schematics | 科研示意图（神经网络架构图、实验流程图等） |
+| | scientific-visualization | 期刊级多面板数据图 |
+| | scientific-slides | 学术组会 PPT 制作 |
+| | peer-review | 结构化论文/基金审稿 |
+| | literature-review | 系统性文献综述 |
+| **可视化** | architecture-diagram | 架构图（Mermaid / PlantUML / D2） |
+| | markdown-mermaid-writing | 24 种 Mermaid 图写法 |
+| | scientific-visualization | 多面板配图 + 期刊格式化 |
+| **开发效率** | git-hygiene | 自动清理 git 工作区，防止 diff 爆炸 |
+| | test-driven-development | TDD 红→绿→重构 |
+| | code-review | 多视角代码审查 |
+| **联网搜索** | web-access | 搜索、网页抓取、社交媒体读取 |
+| | parallel-web | 学术文献优先的并行搜索 |
+| **辅助思考** | brainstorming | 需求澄清 + 方案设计 |
+| | scientific-critical-thinking | 论文论证质量评估 |
+| | hypothesis-generation | 科学假设生成 |
 
-- [web-access](https://github.com/eze-is/web-access) — 所有联网操作统一通道（搜索、网页抓取、社交媒体读取）
-- **parallel-web** — 学术文献优先的并行搜索工具（来源：[antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills)）
+> 我只列了我常用的四分之一，完整清单去 [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) 看。
 
-### 其他推荐
+### 4. 独立仓库推荐
 
-- [architecture-diagram](https://github.com/anthropics/skills) — 画架构图（Mermaid / PlantUML / D2），写文档和报告时高频使用（来源：[anthropics/skills](https://github.com/anthropics/skills)）
-- **git-hygiene** — 自动清理 git 工作区，防止 diff 爆炸（来源：[antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills)）
-- [andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) — Karpathy 的编码四原则（先思考、简洁优先、精准修改、目标驱动），一个 `CLAUDE.md` 文件搞定
-- [obsidian-skills](https://github.com/kepano/obsidian-skills) — 如果你用 Obsidian 做笔记，这个能让 Agent 直接操作你的 Vault
+这几个不是合集里的，但值得单独装：
+
+- [andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) — Karpathy 编码四原则（先思考、简洁优先、精准修改、目标驱动），一个 `CLAUDE.md` 文件搞定
+- [obsidian-skills](https://github.com/kepano/obsidian-skills) — 如果你用 Obsidian 做笔记，Agent 可以直接读写你的 Vault
 - [caveman](https://github.com/JuliusBrussee/caveman) — 让 Agent 用"原始人"风格输出，减少 ~75% token 消耗
 
 ---
