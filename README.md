@@ -141,32 +141,32 @@ npx antigravity-awesome-skills --path .agents/skills --risk safe,none
 
 ---
 
-## 四、一键部署 — 直接抄作业
+## 四、从零开始的配置流程
 
-如果你是新手，不想自己一步步配，把下面的提示词直接贴给 OpenCode（或其他 AI 编程助手），让它帮你完成全部安装配置：
+### 你需要手动做的（GUI 操作，AI 帮不了）
+
+1. 去 [OpenCode 下载页](https://opencode.ai/download) 下载桌面版安装
+2. 注册 [DeepSeek](https://platform.deepseek.com/) → 创建 API Key → 实名认证 → 充值
+3. 打开 OpenCode → 管理模型 → 连接提供商 → 搜 DeepSeek → 粘贴 Key（详见[第二章配图](#二deepseek--为什么选它)）
+
+这三步大概 5 分钟。
+
+### 剩下的交给 Agent
+
+把下面这段贴进 OpenCode 对话框：
 
 ```
-请帮我完成以下操作：
-
-1. 安装 OpenCode：
-   - 去 https://opencode.ai/download 下载适合我系统的桌面版
-   - 或运行：npm install -g opencode-ai
-
-2. 配置 DeepSeek API：
-   - 帮我在 https://platform.deepseek.com 创建 API Key
-   - 充值 $5（约 35 元人民币）
-   - 在 OpenCode 中连接 DeepSeek 提供商，粘贴 API Key
-
-3. 安装 oh-my-openagent 多智能体系统：
-   获取完整安装指南并逐步执行：
-   curl -fsSL https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
-   读完指南后运行：bunx oh-my-openagent install
-
-4. 安装推荐的 Skills：
-   依次 git clone 到 ~/.claude/skills/ 目录：
-   - https://github.com/anthropics/skills（Anthropic 官方 Skills 合集）
-   - https://github.com/multica-ai/andrej-karpathy-skills（Karpathy 编码原则）
-   - https://github.com/sickn33/antigravity-awesome-skills（1,484+ 社区 Skills）
+安装 oh-my-openagent 多智能体系统，获取完整指南并逐步执行：
+curl -fsSL https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
 ```
 
-把这段贴进去，Agent 会一步步带你走完。完成后你在 OpenCode 里输入 `ultrawork` 就能用全套多智能体系统了。
+装完之后，安装 Skills：
+
+```
+安装以下 Skills 到 ~/.claude/skills/：
+- npx antigravity-awesome-skills --path .agents/skills --risk safe,none
+- git clone https://github.com/multica-ai/andrej-karpathy-skills ~/.claude/skills/karpathy
+- git clone https://github.com/kepano/obsidian-skills ~/.claude/skills/obsidian
+```
+
+> Skill 安装非常简单——几乎所有 Skill 仓库都在 README 里或 `SKILL.md` 里提供了给 LLM Agent 的安装 Prompt，直接复制粘贴到 OpenCode 对话框，Agent 会轻松搞定各种配置。
