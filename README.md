@@ -1,6 +1,4 @@
-# OpenCode + DeepSeek：学生也能用的 Vibe Coding 自由方案
-
-低成本、高效率的 AI 辅助编程环境搭建教程。
+# DeepSeek + OpenCode：实现 Claude Code 级 Vibe Coding 自由
 
 [中文](./README.md) | [English](./README_en.md)
 
@@ -16,7 +14,7 @@
 
 ## 一、OpenCode — 开源的 AI 编程 Agent
 
-如官网介绍，[OpenCode](https://opencode.ai/) 是一个开源的 AI 编码代理。它提供终端界面、桌面应用和 IDE 扩展等多种使用方式。我个人觉得使用体验非常像 Claude Code，不能像 Cursor 一样在里面自己修改代码，OpenCode Agent + Cursor 人工及时校准项目代码，能有效兼顾人工智能和能工智人，配合一点古法编程还是能对项目有更强的掌控。
+OpenCode 是我目前用过最接近 Claude Code 体验的开源 AI 编程工具。终端、桌面、IDE 都能用。和 Cursor 不同，它不在编辑器里直接改代码，而是对话式驱动。我习惯 OpenCode Agent 出代码 + Cursor 人工校准，能工智人和人工智能各司其职，配合一点古法编程，对项目掌控反而更强。
 
 **安装：**
 
@@ -28,21 +26,11 @@
 
 ## 二、DeepSeek — 为什么选它
 
-### 三个选择理由
+**服务稳定。** 对中文指令理解能力不错，三个星期重度使用从未遇到过限流或者长时间不响应（Cursor 除了 composer 系列，每到晚上就开始 "taking longer than expected"，响应极度缓慢甚至直接断连）。
 
-**1）对中文指令理解不错，服务稳定**
+**成本极低。** 详见 [DeepSeek API 定价](https://api-docs.deepseek.com/zh-cn/quick_start/pricing/)，2.5 折体验结束之后正式定价也很便宜。编程任务缓存命中率都在 98% 左右，百万 tokens 输入才 $0.02，跟不要钱似的。
 
-连续三周重度使用，从未遇到过限流或者长时间不响应。作为对比，Cursor 每到晚上就开始 "taking longer than expected"，响应极度缓慢甚至直接断连。
-
-**2）成本极低**
-
-详见 [DeepSeek API 定价](https://api-docs.deepseek.com/zh-cn/quick_start/pricing/)，2.5 折体验结束之后正式定价也很便宜。编程任务缓存命中率在 98% 左右，百万 token 输入才 $0.02，约等于不要钱。
-
-![DeepSeek API 定价](assets/deepseek-pricing.png)
-
-**3）缺点：没有视觉识别能力**
-
-但是对于编程任务足够用了。我自己主要用 Python/LaTeX 做实验、写论文，基本够。
+另外，唯一的缺点是无法视觉识别，但是对于编程任务足矣。亲测主要用 Python/LaTeX 做实验写论文，基本够。
 
 ### 配置步骤
 
@@ -87,11 +75,7 @@ Skills 是给 Agent 装上的"外挂模块"，每个 Skill 是一个包含 `SKIL
 
 ![Skill 选择器](assets/setup-06-skill-selector.png)
 
-安装也很省心——几乎所有 Skill 仓库都在 README 或 `SKILL.md` 里附了给 LLM Agent 的安装提示，把链接贴进 OpenCode 对话框，Agent 读完指南会自己一步步搞定。
-
-### 你需要手动做的（GUI，约 5 分钟）
-
-> OpenCode 和 DeepSeek 的安装配置还是得自己来——涉及网页注册、点按钮、填表单这些 GUI 操作，AI 帮不上忙。详见[第二章配图](#二deepseek--为什么选它)。
+安装也很省心。几乎所有 skill 仓库都有给 OpenCode 里的 LLM 的安装 prompt，完全可以直接复制粘贴到 OpenCode 对话框，agent 会轻松搞定各种配置。
 
 下面推荐我自己日常高频用的几类。
 
@@ -122,7 +106,7 @@ Superpowers 不只是一个 Skill 合集，它是一套完整的软件开发方�
 | verification-before-completion | 用证据说话，不靠感觉判断"修好了" |
 | using-superpowers | Skill 系统本身的使用说明 |
 
-**OpenCode 安装方法**：仓库的 `.opencode/INSTALL.md` 里有完整的安装提示，把链接贴给 Agent 就行——和 Skills 等其他仓库一样，让 Agent 自己读完指南搞定。
+**OpenCode 安装方法**：仓库的 `.opencode/INSTALL.md` 里有完整的安装提示，把链接贴给 Agent 就行。和 Skills 等其他仓库一样，让 Agent 自己读完指南搞定。
 
 ### 3. [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) — 社区 Skills 大合集
 
