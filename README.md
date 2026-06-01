@@ -10,8 +10,7 @@
 
 1. [一、OpenCode — 开源的 AI 编程 Agent](#一opencode--开源的-ai-编程-agent)
 2. [二、DeepSeek — 为什么选它](#二deepseek--为什么选它)
-3. [三、Skills 推荐 — 武装你的 Agent](#三skills-推荐--武装你的-agent)
-4. [四、一键部署 — 直接抄作业](#四一键部署--直接抄作业)
+3. [三、Skills 推荐 + 配置流程 — 武装你的 Agent](#三skills-推荐--武装你的-agent)
 
 ---
 
@@ -81,15 +80,28 @@ DeepSeek 出现在模型列表，思考强度可以调整（我一直用的 Max�
 
 ## 三、Skills 推荐 — 武装你的 Agent
 
-Skills 是给 Agent 装上的"外挂模块"，一个 Skill 目录下就是一个 `SKILL.md` 文件，Agent 遇到匹配任务时自动加载对应知识。我本地装了 179 个，下面推荐我日常高频使用、真正提高效率的几类。
+Skills 是给 Agent 装上的"外挂模块"，每个 Skill 是一个包含 `SKILL.md` 的目录。Agent 有两种使用方式：
+
+- **自动匹配**：Agent 读到 `SKILL.md` 里的描述，遇到对应任务时自动加载
+- **手动指定**：在 OpenCode 对话框输入 `/` 调出 Skill 列表直接选
+
+![Skill 选择器](assets/setup-06-skill-selector.png)
+
+安装也很省心——几乎所有 Skill 仓库都在 README 或 `SKILL.md` 里附了给 LLM Agent 的安装提示，把链接贴进 OpenCode 对话框，Agent 读完指南会自己一步步搞定。
+
+### 你需要手动做的（GUI，约 5 分钟）
+
+> OpenCode 和 DeepSeek 的安装配置还是得自己来——涉及网页注册、点按钮、填表单这些 GUI 操作，AI 帮不上忙。详见[第二章配图](#二deepseek--为什么选它)。
+
+下面推荐我自己日常高频用的几类。
 
 ### 1. 多智能体编排
 
-[oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) — 给 OpenCode 装上全套多智能体系统（Sisyphus 编排器 + 11 个专业 Agent + Team Mode）。装好之后只要在 prompt 里带 `ultrawork` 关键词，系统自动协调 Agent 干活，不用自己手动调度。
+[oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) — 给 OpenCode 装上全套多智能体系统（Sisyphus 编排器 + 11 个专业 Agent + Team Mode）。装好之后只要在 prompt 里带 `ultrawork` 关键词，系统自动协调 Agent 干活，不用自己手动调度。仓库里有完整的安装指南，直接贴给 Agent 执行。
 
 ### 2. Superpowers 系列
 
-Superpowers 是 OpenCode 内置的核心工作流技能，影响 Agent 的行为模式。高频有用的几个（均为 OpenCode 自带，无需额外安装，在 prompt 里提关键词即可触发）：
+Superpowers 是 OpenCode 内置的核心工作流技能，影响 Agent 的行为模式（均为 OpenCode 自带，无需额外安装，在 prompt 里提关键词即可触发）：
 
 - **using-superpowers** — 告诉 Agent 怎么自动发现和加载匹配的 Skill
 - **brainstorming** — 任何创造性任务之前先做需求澄清和方案设计
@@ -98,11 +110,7 @@ Superpowers 是 OpenCode 内置的核心工作流技能，影响 Agent 的行为
 
 ### 3. [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) — 社区 Skills 大合集
 
-如果说 oh-my-openagent 是大脑，那这个就是兵器库。1,400+ 个社区贡献的 Skills，覆盖你能想到的所有场景。安装：
-
-```bash
-npx antigravity-awesome-skills --path .agents/skills --risk safe,none
-```
+如果说 oh-my-openagent 是大脑，那这个就是兵器库。1,400+ 个社区贡献的 Skills，覆盖你能想到的所有场景。仓库 README 里就有给 Agent 的一键安装提示。
 
 装完你能用到的主要 Skill：
 
@@ -129,44 +137,12 @@ npx antigravity-awesome-skills --path .agents/skills --risk safe,none
 | | scientific-critical-thinking | 论文论证质量评估 |
 | | hypothesis-generation | 科学假设生成 |
 
-> 我只列了我常用的四分之一，完整清单去 [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) 看。
+> 只列了常用的四分之一，完整清单见 [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills)。
 
 ### 4. 独立仓库推荐
 
-这几个不是合集里的，但值得单独装：
+这几个不是合集里的，但值得单独装。同样，去各自仓库 README 里找给 Agent 的安装提示，贴进对话框就行：
 
 - [andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) — Karpathy 编码四原则（先思考、简洁优先、精准修改、目标驱动），一个 `CLAUDE.md` 文件搞定
 - [obsidian-skills](https://github.com/kepano/obsidian-skills) — 如果你用 Obsidian 做笔记，Agent 可以直接读写你的 Vault
 - [caveman](https://github.com/JuliusBrussee/caveman) — 让 Agent 用"原始人"风格输出，减少 ~75% token 消耗
-
----
-
-## 四、从零开始的配置流程
-
-### 你需要手动做的（GUI 操作，AI 帮不了）
-
-1. 去 [OpenCode 下载页](https://opencode.ai/download) 下载桌面版安装
-2. 注册 [DeepSeek](https://platform.deepseek.com/) → 创建 API Key → 实名认证 → 充值
-3. 打开 OpenCode → 管理模型 → 连接提供商 → 搜 DeepSeek → 粘贴 Key（详见[第二章配图](#二deepseek--为什么选它)）
-
-这三步大概 5 分钟。
-
-### 剩下的交给 Agent
-
-把下面这段贴进 OpenCode 对话框：
-
-```
-安装 oh-my-openagent 多智能体系统，获取完整指南并逐步执行：
-curl -fsSL https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/refs/heads/dev/docs/guide/installation.md
-```
-
-装完之后，安装 Skills：
-
-```
-安装以下 Skills 到 ~/.claude/skills/：
-- npx antigravity-awesome-skills --path .agents/skills --risk safe,none
-- git clone https://github.com/multica-ai/andrej-karpathy-skills ~/.claude/skills/karpathy
-- git clone https://github.com/kepano/obsidian-skills ~/.claude/skills/obsidian
-```
-
-> Skill 安装非常简单——几乎所有 Skill 仓库都在 README 里或 `SKILL.md` 里提供了给 LLM Agent 的安装 Prompt，直接复制粘贴到 OpenCode 对话框，Agent 会轻松搞定各种配置。
