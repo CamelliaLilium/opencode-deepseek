@@ -99,14 +99,30 @@ Skills 是给 Agent 装上的"外挂模块"，每个 Skill 是一个包含 `SKIL
 
 [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) — 给 OpenCode 装上全套多智能体系统（Sisyphus 编排器 + 11 个专业 Agent + Team Mode）。装好之后只要在 prompt 里带 `ultrawork` 关键词，系统自动协调 Agent 干活，不用自己手动调度。仓库里有完整的安装指南，直接贴给 Agent 执行。
 
-### 2. Superpowers 系列
+### 2. [Superpowers](https://github.com/obra/superpowers) — 开发方法论
 
-Superpowers 是 OpenCode 内置的核心工作流技能，影响 Agent 的行为模式（均为 OpenCode 自带，无需额外安装，在 prompt 里提关键词即可触发）：
+Superpowers 不只是一个 Skill 合集，它是一套完整的软件开发方法论——从需求澄清到分支合并，全程覆盖。核心流程：
 
-- **using-superpowers** — 告诉 Agent 怎么自动发现和加载匹配的 Skill
-- **brainstorming** — 任何创造性任务之前先做需求澄清和方案设计
-- **systematic-debugging** — 遇到 bug 先系统性分析，而不是盲目试错
-- **test-driven-development** — TDD 红→绿→重构流程
+> **brainstorming** → **writing-plans** → **subagent-driven-development** → **test-driven-development** → **requesting-code-review** → **finishing-a-development-branch**
+
+包含的 Skill：
+
+| Skill | 干什么用 |
+|-------|---------|
+| brainstorming | 动手写代码前先做需求澄清和方案设计 |
+| writing-plans | 把需求拆成原子化的实现步骤 |
+| subagent-driven-development | 每个任务派独立 Agent 执行，两阶段审查 |
+| test-driven-development | 红→绿→重构循环 |
+| requesting-code-review | 任务完成后的预提交审查 |
+| receiving-code-review | 如何处理别人的 code review 反馈 |
+| systematic-debugging | 4 阶段系统性排查（非盲目试错） |
+| using-git-worktrees | 在隔离分支上并行开发 |
+| dispatching-parallel-agents | 同时派出多个 Agent 处理独立任务 |
+| finishing-a-development-branch | 完成后决定 merge / PR / 丢弃 |
+| verification-before-completion | 用证据说话，不靠感觉判断"修好了" |
+| using-superpowers | Skill 系统本身的使用说明 |
+
+**OpenCode 安装方法**：仓库的 `.opencode/INSTALL.md` 里有完整的安装提示，把链接贴给 Agent 就行——和 Skills 等其他仓库一样，让 Agent 自己读完指南搞定。
 
 ### 3. [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) — 社区 Skills 大合集
 
