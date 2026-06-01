@@ -75,7 +75,7 @@ Skills 是给 Agent 装上的"外挂模块"，每个 Skill 是一个包含 `SKIL
 
 ![Skill 选择器](assets/setup-06-skill-selector.png)
 
-安装也很省心。几乎每个 skill 仓库的 README 里都有给 LLM 的安装说明，去对应仓库就能找到。
+安装也很省心。几乎所有 skill 仓库都有给 OpenCode 里的 LLM 的安装 prompt，在链接的仓库 .md 文件里找到后，直接复制粘贴到 OpenCode 对话框，agent 会轻松搞定各种配置。
 
 下面推荐我自己日常高频用的几类。
 
